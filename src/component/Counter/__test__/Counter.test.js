@@ -4,8 +4,9 @@ import Counter from "../Counter"
 import '@testing-library/jest-dom/extend-expect'
 import userEvent from '@testing-library/user-event'
 
+describe("Counter component",()=>{
 
-test('header renders with correct text',()=>{
+it('header renders with correct text',()=>{
   render(<Counter />)
 
  const headerEl= screen.getByTestId("header")
@@ -14,7 +15,7 @@ expect(headerEl.textContent).toBe("counter")
 
 
 })
-test("counter intially start at 0",()=>{
+it("counter intially start at 0",()=>{
   render(<Counter />)
 
 const counterEl= screen.getByTestId("counter")
@@ -23,7 +24,7 @@ expect(counterEl.textContent).toBe("0")
 
 
 })
-test("add button renders with correct +",async()=>{
+it("add button renders with correct +",async()=>{
 
   render(<Counter />)
   const button = screen.getByTestId("btn-add")
@@ -35,7 +36,7 @@ test("add button renders with correct +",async()=>{
     
     
     })
-    test("sub button renders with correct -",async()=>{
+    it("sub button renders with correct -",async()=>{
 
       render(<Counter />)
       const button = screen.getByTestId("btn-sub")
@@ -47,3 +48,4 @@ test("add button renders with correct +",async()=>{
     
         
         })
+      })

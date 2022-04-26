@@ -1,15 +1,10 @@
 
 # Name of workflow
-name: Build workflow
+name: Node.js CI
 
-# When workflow is triggered
-# on:
-#   push:
-#     branches:
-#       - main
 
-on:
-  workflow_dispatch:
+on: [push]
+
 
 # Jobs to carry out
 jobs:
